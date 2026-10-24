@@ -1,0 +1,13 @@
+# JetBrains Rider
+.idea/
+
+# Build output
+bin/
+obj/
+
+# Application settings and secrets
+appsettings.json
+appsettings.Development.json
+
+# IDE settings
+.vscode/

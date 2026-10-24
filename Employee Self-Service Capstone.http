@@ -1,0 +1,6 @@
+@Employee_Self_Service_Capstone_HostAddress = http://localhost:5202
+
+GET {{Employee_Self_Service_Capstone_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
