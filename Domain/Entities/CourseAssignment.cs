@@ -21,8 +21,8 @@ public class CourseAssignment
     public decimal? BestScore { get; set; }
     public int CycleNumber { get; set; } = 1;
 
-    public DateTime? CompletedAtUtc { get; set; }
-    public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
+    public DateTime? CompletedAt { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public ICollection<LessonProgress> LessonProgresses { get; set; } = new List<LessonProgress>();
     public ICollection<AssessmentAttempt> Attempts { get; set; } = new List<AssessmentAttempt>();
     public ICollection<AssessmentResetHistory> ResetHistories { get; set; } = new List<AssessmentResetHistory>();

@@ -11,7 +11,7 @@ public interface IPayslipRepository
 
     Task<Payslip?> GetEmployeePayslipByPeriodAsync(int employeeId, int month, int year);
 
-    Task<IReadOnlyList<Payslip>> GetEmployeePayslipsAsync(int employeeId, int? year = null);
+    Task<IEnumerable<Payslip>> GetEmployeePayslipsAsync(int employeeId, int? year = null);
 
     Task<bool> PayslipExistsForPeriodAsync(int employeeId, int month, int year);
 

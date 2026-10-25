@@ -7,6 +7,7 @@ public interface IDepartmentRepository
     Task<Department?> GetByIdAsync(int departmentId);
 
     Task<Department?> GetByCodeAsync(string code);
+    Task<IEnumerable<Department>> GetAllAsync();
 
     Task<bool> ExistsByNameAsync(string name);
 

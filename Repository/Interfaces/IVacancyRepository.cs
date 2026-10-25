@@ -8,11 +8,11 @@ public interface IVacancyRepository
 
     Task<InternalOpportunity?> GetVacancyWithApplicationsAsync(int vacancyId);
 
-    Task<IReadOnlyList<InternalOpportunity>> GetActiveVacanciesAsync(DateTime nowUtc);
+    Task<IEnumerable<InternalOpportunity>> GetActiveVacanciesAsync(DateTime nowUtc);
 
     Task<VacancyApplication?> GetApplicationAsync(int vacancyId, int employeeId);
 
-    Task<IReadOnlyList<VacancyApplication>> GetApplicationsByEmployeeAsync(int employeeId);
+    Task<IEnumerable<VacancyApplication>> GetApplicationsByEmployeeAsync(int employeeId);
 
     Task<bool> HasAppliedAsync(int vacancyId, int employeeId);
 

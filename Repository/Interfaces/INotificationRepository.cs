@@ -6,7 +6,7 @@ public interface INotificationRepository
 {
     Task<Notification?> GetByIdAsync(int id);
 
-    Task<IReadOnlyList<Notification>> GetUserNotificationsAsync(int recipientUserId, bool unreadOnly = false);
+    Task<IEnumerable<Notification>> GetUserNotificationsAsync(int recipientUserId, bool unreadOnly = false);
 
     Task<int> GetUnreadCountAsync(int recipientUserId);
 

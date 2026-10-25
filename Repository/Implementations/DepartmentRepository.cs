@@ -26,6 +26,14 @@ public class DepartmentRepository : IDepartmentRepository
             .FirstOrDefaultAsync(d => d.Code == code);
     }
 
+    public async Task<IEnumerable<Department>> GetAllAsync()
+    {
+        return await _context.Departments
+            .OrderBy(d => d.Name)
+            .AsNoTracking()
+            .ToListAsync();
+    }
+    
     public async Task<bool> ExistsByNameAsync(string name)
     {
         return await _context.Departments
@@ -35,7 +43,7 @@ public class DepartmentRepository : IDepartmentRepository
     public async Task<bool> ExistsByCodeAsync(string code)
     {
         return await _context.Departments
-            .AnyAsync(d => d.Code == code);
+            .AnyAsync(d => d.Code.ToLower() == code.Trim().ToLower());
     }
 
     public async Task AddAsync(Department department)

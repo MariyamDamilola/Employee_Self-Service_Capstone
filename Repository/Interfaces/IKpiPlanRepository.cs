@@ -8,9 +8,9 @@ public interface IKpiPlanRepository
 
     Task<KpiPlan?> GetPlanWithItemsAsync(int planId);
 
-    Task<IReadOnlyList<KpiPlan>> GetEmployeePlansAsync(int employeeId);
+    Task<IEnumerable<KpiPlan>> GetEmployeePlansAsync(int employeeId);
 
-    Task<IReadOnlyList<KpiPlan>> GetPendingReviewsByManagerAsync(int managerId);
+    Task<IEnumerable<KpiPlan>> GetPendingReviewsByManagerAsync(int managerId);
 
     Task<bool> HasActivePlanForPeriodAsync(int employeeId, string reviewPeriod, int? excludePlanId = null);
 

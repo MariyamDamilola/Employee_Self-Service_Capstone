@@ -11,76 +11,76 @@ public class AppDbContext : DbContext
     }
     
     
-           // ==========================================
+    // ==========================================
     // Module 1: Identity & Security
     // ==========================================
-    public DbSet<Department> Departments => Set<Department>();
-    public DbSet<Grade> Grades => Set<Grade>();
-    public DbSet<Role> Roles => Set<Role>();
-    public DbSet<EmployeeRole> EmployeeRoles => Set<EmployeeRole>();
-    public DbSet<Employee> Employees => Set<Employee>();
-    public DbSet<EmployeeAccount> EmployeeAccounts => Set<EmployeeAccount>();
-    public DbSet<AccountSecurityToken> AccountSecurityTokens => Set<AccountSecurityToken>();
+    public DbSet<Department> Departments { get; set; }
+
+    public DbSet<Grade> Grades { get; set; }
+    public DbSet<Role> Roles { get; set; }
+    public DbSet<EmployeeRole> EmployeeRoles { get; set; }
+    public DbSet<Employee> Employees { get; set; }
+    public DbSet<EmployeeAccount> EmployeeAccounts { get; set; }
+    public DbSet<AccountSecurityToken> AccountSecurityTokens { get; set; }
 
     // ==========================================
     // Module 2: Training & Estacode
     // ==========================================
-    public DbSet<EstacodeRate> EstacodeRates => Set<EstacodeRate>();
-    public DbSet<TrainingRequest> TrainingRequests => Set<TrainingRequest>();
-    public DbSet<TrainingAllowance> TrainingAllowances => Set<TrainingAllowance>();
-    public DbSet<TrainingApprovalHistory> TrainingApprovalHistories => Set<TrainingApprovalHistory>();
-    public DbSet<TrainingEvidence> TrainingEvidences => Set<TrainingEvidence>();
-    public DbSet<TrainingRequestAssignmentHistory> TrainingRequestAssignmentHistories => Set<TrainingRequestAssignmentHistory>();
-    public DbSet<TrainingRequestComment> TrainingRequestComments => Set<TrainingRequestComment>();
+    public DbSet<EstacodeRate> EstacodeRates { get; set; }
+    public DbSet<TrainingRequest> TrainingRequests { get; set; }
+    public DbSet<TrainingAllowance> TrainingAllowances { get; set; }
+    public DbSet<TrainingApprovalHistory> TrainingApprovalHistories { get; set; }
+    public DbSet<TrainingEvidence> TrainingEvidences { get; set; }
+    public DbSet<TrainingRequestAssignmentHistory> TrainingRequestAssignmentHistories { get; set; }
+    public DbSet<TrainingRequestComment> TrainingRequestComments { get; set; }
 
     // ==========================================
     // Module 3: Learning Management System (LMS)
     // ==========================================
-    public DbSet<Course> Courses => Set<Course>();
-    public DbSet<CourseLesson> CourseLessons => Set<CourseLesson>();
-    public DbSet<CourseAssessment> CourseAssessments => Set<CourseAssessment>();
-    public DbSet<AssessmentQuestion> AssessmentQuestions => Set<AssessmentQuestion>();
-    public DbSet<AssessmentOption> AssessmentOptions => Set<AssessmentOption>();
-    public DbSet<CourseAssignment> CourseAssignments => Set<CourseAssignment>();
-    public DbSet<LessonProgress> LessonProgresses => Set<LessonProgress>();
-    public DbSet<AssessmentAttempt> AssessmentAttempts => Set<AssessmentAttempt>();
-    public DbSet<AssessmentAnswer> AssessmentAnswers => Set<AssessmentAnswer>();
-    public DbSet<AssessmentResetHistory> AssessmentResetHistories => Set<AssessmentResetHistory>();
+    public DbSet<Course> Courses { get; set; }
+    public DbSet<CourseLesson> CourseLessons { get; set; }
+    public DbSet<CourseAssessment> CourseAssessments { get; set; }
+    public DbSet<AssessmentQuestion> AssessmentQuestions { get; set; }
+    public DbSet<AssessmentOption> AssessmentOptions { get; set; }
+    public DbSet<CourseAssignment> CourseAssignments { get; set; }
+    public DbSet<LessonProgress> LessonProgresses { get; set; }
+    public DbSet<AssessmentAttempt> AssessmentAttempts { get; set; }
+    public DbSet<AssessmentAnswer> AssessmentAnswers { get; set; }
+    public DbSet<AssessmentResetHistory> AssessmentResetHistories { get; set; }
 
     // ==========================================
     // Module 4: Performance & KPI Management
     // ==========================================
-    public DbSet<KpiPlan> KpiPlans => Set<KpiPlan>();
-    public DbSet<KpiItem> KpiItems => Set<KpiItem>();
-    public DbSet<KpiReview> KpiReviews => Set<KpiReview>();
-    public DbSet<KpiItemReview> KpiItemReviews => Set<KpiItemReview>();
-    public DbSet<KpiPlanHistory> KpiPlanHistories => Set<KpiPlanHistory>();
+    public DbSet<KpiPlan> KpiPlans { get; set; }
+    public DbSet<KpiItem> KpiItems { get; set; }
+    public DbSet<KpiReview> KpiReviews { get; set; }
+    public DbSet<KpiItemReview> KpiItemReviews { get; set; }
+    public DbSet<KpiPlanHistory> KpiPlanHistories { get; set; }
 
     // ==========================================
     // Module 5: Payslips
     // ==========================================
-    public DbSet<Payslip> Payslips => Set<Payslip>();
-    public DbSet<PayslipVersion> PayslipVersions => Set<PayslipVersion>();
-    public DbSet<PayslipVersionAllowanceItem> PayslipVersionAllowanceItems => Set<PayslipVersionAllowanceItem>();
-    public DbSet<PayslipVersionDeductionItem> PayslipVersionDeductionItems => Set<PayslipVersionDeductionItem>();
+    public DbSet<Payslip> Payslips { get; set; }
+    public DbSet<PayslipVersion> PayslipVersions { get; set; }
+    public DbSet<PayslipVersionAllowanceItem> PayslipVersionAllowanceItems { get; set; }
+    public DbSet<PayslipVersionDeductionItem> PayslipVersionDeductionItems { get; set; }
 
     // ==========================================
     // Module 6: Internal Opportunities
     // ==========================================
-    public DbSet<Vacancy> Vacancies => Set<Vacancy>();
-    public DbSet<VacancyAllowedDepartment> VacancyAllowedDepartments => Set<VacancyAllowedDepartment>();
-    public DbSet<VacancyAllowedGrade> VacancyAllowedGrades => Set<VacancyAllowedGrade>();
-    public DbSet<VacancyApplication> VacancyApplications => Set<VacancyApplication>();
-    public DbSet<VacancyApplicationReview> VacancyApplicationReviews => Set<VacancyApplicationReview>();
+    public DbSet<InternalOpportunity> InternalOpportunities { get; set; }
+    public DbSet<VacancyApplication> VacancyApplications { get; set; }
+    public DbSet<OpportunityAllowedDepartment> OpportunityAllowedDepartments { get; set; }
+    public DbSet<OpportunityAllowedGrade> OpportunityAllowedGrades { get; set; }
 
     // ==========================================
     // Module 7: Notifications & Queue Workers
     // ==========================================
-    public DbSet<Notification> Notifications => Set<Notification>();
-    public DbSet<EmailQueue> EmailQueues => Set<EmailQueue>();
-    public DbSet<EmailQueueAttempt> EmailQueueAttempts => Set<EmailQueueAttempt>();
-    public DbSet<EmailReminderLog> EmailReminderLogs => Set<EmailReminderLog>();
-    public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
+    public DbSet<Notification> Notifications { get; set; }
+    public DbSet<EmailQueue> EmailQueues { get; set; }
+    public DbSet<EmailQueueAttempt> EmailQueueAttempts { get; set; }
+    public DbSet<EmailReminderLog> EmailReminderLogs { get; set; }
+    public DbSet<AuditLog> AuditLogs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -114,52 +114,74 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<Employee>(b =>
         {
-            b.HasKey(x => x.Id);
-            b.HasIndex(x => x.EmployeeNumber).IsUnique();
-            b.HasIndex(x => x.Email).IsUnique();
+         b.HasKey(x => x.Id);
 
-            b.Property(x => x.EmployeeNumber).HasMaxLength(50).IsRequired();
-            b.Property(x => x.FullName).HasMaxLength(150).IsRequired();
-            b.Property(x => x.Email).HasMaxLength(150).IsRequired();
-            b.Property(x => x.PhoneNumber).HasMaxLength(30);
+         b.HasIndex(x => x.EmployeeNumber).IsUnique();
+         b.HasIndex(x => x.Email).IsUnique();
 
-            b.HasOne(x => x.Department)
-             .WithMany(d => d.Employees)
-             .HasForeignKey(x => x.DepartmentId)
-             .OnDelete(DeleteBehavior.Restrict);
+         b.Property(x => x.EmployeeNumber)
+          .HasMaxLength(50)
+          .IsRequired();
 
-            b.HasOne(x => x.Grade)
-             .WithMany(g => g.Employees)
-             .HasForeignKey(x => x.GradeId)
-             .OnDelete(DeleteBehavior.Restrict);
+         b.Property(x => x.FullName)
+          .HasMaxLength(150)
+          .IsRequired();
 
-            b.HasOne(x => x.ReportingManager)
-             .WithMany(m => m.DirectReports)
-             .HasForeignKey(x => x.ReportingManagerId)
-             .OnDelete(DeleteBehavior.Restrict);
+         b.Property(x => x.Email)
+          .HasMaxLength(150)
+          .IsRequired();
 
-            b.HasOne(x => x.Account)
-             .WithOne(a => a.Employee)
-             .HasForeignKey<EmployeeAccount>(a => a.EmployeeId)
-             .OnDelete(DeleteBehavior.Restrict);
+         b.Property(x => x.PhoneNumber)
+          .HasMaxLength(30);
+
+         b.Property(x => x.AccountSetupToken)
+          .HasMaxLength(256);
+
+         b.Property(x => x.PasswordResetToken)
+          .HasMaxLength(256);
+
+         // Department (1-to-many)
+         b.HasOne(x => x.Department)
+          .WithMany(d => d.Employees)
+          .HasForeignKey(x => x.DepartmentId)
+          .OnDelete(DeleteBehavior.Restrict);
+
+         // Grade (1-to-many)
+         b.HasOne(x => x.Grade)
+          .WithMany(g => g.Employees)
+          .HasForeignKey(x => x.GradeId)
+          .OnDelete(DeleteBehavior.Restrict);
+
+         // Self-referencing manager hierarchy (1-to-many)
+         b.HasOne(x => x.ReportingManager)
+          .WithMany(m => m.DirectReports)
+          .HasForeignKey(x => x.ReportingManagerId)
+          .IsRequired(false)
+          .OnDelete(DeleteBehavior.Restrict);
+
+         // 1-to-1 with EmployeeAccount
+         b.HasOne(x => x.Account)
+          .WithOne(a => a.Employee)
+          .HasForeignKey<EmployeeAccount>(a => a.EmployeeId)
+          .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<EmployeeRole>(b =>
         {
-            b.HasKey(x => x.Id);
-            b.HasIndex(x => new { x.EmployeeId, x.RoleId }).IsUnique();
+         b.HasKey(x => x.Id);
+         b.HasIndex(x => new { x.EmployeeId, x.RoleId }).IsUnique();
 
-            b.HasOne(x => x.Employee)
-             .WithMany(e => e.EmployeeRoles)
-             .HasForeignKey(x => x.EmployeeId)
-             .OnDelete(DeleteBehavior.Restrict);
+         b.HasOne(x => x.Employee)
+          .WithMany(e => e.EmployeeRoles)
+          .HasForeignKey(x => x.EmployeeId)
+          .OnDelete(DeleteBehavior.Cascade);
 
-            b.HasOne(x => x.Role)
-             .WithMany(r => r.EmployeeRoles)
-             .HasForeignKey(x => x.RoleId)
-             .OnDelete(DeleteBehavior.Restrict);
+         b.HasOne(x => x.Role)
+          .WithMany(r => r.EmployeeRoles)
+          .HasForeignKey(x => x.RoleId)
+          .OnDelete(DeleteBehavior.Restrict);
         });
-
+        
         modelBuilder.Entity<AccountSecurityToken>(b =>
         {
             b.HasKey(x => x.Id);
@@ -597,96 +619,160 @@ public class AppDbContext : DbContext
         // ==========================================
         // 6. Internal Opportunities (VAC-01, VAC-02)
         // ==========================================
-        modelBuilder.Entity<Vacancy>(b =>
-        {
-            b.HasKey(x => x.Id);
-            b.Property(x => x.Title).HasMaxLength(200).IsRequired();
-            b.Property(x => x.OpportunityType).HasMaxLength(50).IsRequired();
-            b.Property(x => x.DepartmentName).HasMaxLength(150).IsRequired();
+     
 
-            b.HasOne(x => x.CreatedBy)
-             .WithMany()
-             .HasForeignKey(x => x.CreatedById)
-             .OnDelete(DeleteBehavior.Restrict);
-        });
-
-        modelBuilder.Entity<VacancyAllowedDepartment>(b =>
-        {
-            b.HasKey(x => x.Id);
-            b.HasIndex(x => new { x.VacancyId, x.DepartmentId }).IsUnique();
-
-            b.HasOne(x => x.Vacancy)
-             .WithMany(v => v.AllowedDepartments)
-             .HasForeignKey(x => x.VacancyId)
-             .OnDelete(DeleteBehavior.Restrict);
-
+       modelBuilder.Entity<InternalOpportunity>(b =>
+       {
+        b.HasKey(x => x.Id);
+        
+            b.HasIndex(x => x.ReferenceNumber).IsUnique();
+        
+            b.Property(x => x.Title)
+                .IsRequired()
+                .HasMaxLength(200);
+        
+            b.Property(x => x.ReferenceNumber)
+                .IsRequired()
+                .HasMaxLength(50);
+        
+            b.Property(x => x.Description)
+                .IsRequired();
+        
+            b.Property(x => x.Requirements)
+                .IsRequired();
+        
+            b.Property(x => x.EligibilityText)
+                .HasMaxLength(1000);
+        
+            b.Property(x => x.Location)
+                .HasMaxLength(150);
+        
+            b.Property(x => x.JobType)
+                .HasMaxLength(50);
+        
+            b.Property(x => x.AllowedGrades)
+                .HasMaxLength(50);
+        
+            b.Property(x => x.Status)
+                .HasConversion<string>()
+                .HasMaxLength(30)
+                .IsRequired();
+        
+            // Foreign Key to Department
             b.HasOne(x => x.Department)
-             .WithMany()
-             .HasForeignKey(x => x.DepartmentId)
-             .OnDelete(DeleteBehavior.Restrict);
+                .WithMany()
+                .HasForeignKey(x => x.DepartmentId)
+                .OnDelete(DeleteBehavior.Restrict);
+        
+            // Foreign Key to Employee (PostedBy)
+            b.HasOne(x => x.PostedBy)
+                .WithMany()
+                .HasForeignKey(x => x.PostedById)
+                .OnDelete(DeleteBehavior.Restrict);
         });
+       
 
-        modelBuilder.Entity<VacancyAllowedGrade>(b =>
-        {
-            b.HasKey(x => x.Id);
-            b.HasIndex(x => new { x.VacancyId, x.GradeId }).IsUnique();
 
-            b.HasOne(x => x.Vacancy)
-             .WithMany(v => v.AllowedGrades)
-             .HasForeignKey(x => x.VacancyId)
-             .OnDelete(DeleteBehavior.Restrict);
+       modelBuilder.Entity<OpportunityAllowedDepartment>(b =>
+{
+    b.HasKey(x => x.Id);
 
-            b.HasOne(x => x.Grade)
-             .WithMany()
-             .HasForeignKey(x => x.GradeId)
-             .OnDelete(DeleteBehavior.Restrict);
-        });
+    b.HasIndex(x => new { x.InternalOpportunityId, x.DepartmentId }).IsUnique();
 
-        modelBuilder.Entity<VacancyApplication>(b =>
-        {
-            b.HasKey(x => x.Id);
-            b.HasIndex(x => new { x.VacancyId, x.EmployeeId }).IsUnique();
-            b.Property(x => x.SupportingStatement).IsRequired();
+    b.HasOne(x => x.InternalOpportunity)
+        .WithMany(o => o.AllowedDepartments)
+        .HasForeignKey(x => x.InternalOpportunityId)
+        .OnDelete(DeleteBehavior.Cascade);
 
-            b.HasOne(x => x.Vacancy)
-             .WithMany(v => v.Applications)
-             .HasForeignKey(x => x.VacancyId)
-             .OnDelete(DeleteBehavior.Restrict);
+    b.HasOne(x => x.Department)
+        .WithMany()
+        .HasForeignKey(x => x.DepartmentId)
+        .OnDelete(DeleteBehavior.Restrict);
+});
 
-            b.HasOne(x => x.Employee)
-             .WithMany(e => e.VacancyApplications)
-             .HasForeignKey(x => x.EmployeeId)
-             .OnDelete(DeleteBehavior.Restrict);
-        });
+modelBuilder.Entity<OpportunityAllowedGrade>(b =>
+{
+    b.HasKey(x => x.Id);
 
-        modelBuilder.Entity<VacancyApplicationReview>(b =>
-        {
-            b.HasKey(x => x.Id);
+    b.HasIndex(x => new { x.InternalOpportunityId, x.GradeId }).IsUnique();
 
-            b.HasOne(x => x.VacancyApplication)
-             .WithMany(a => a.Reviews)
-             .HasForeignKey(x => x.VacancyApplicationId)
-             .OnDelete(DeleteBehavior.Restrict);
+    b.HasOne(x => x.InternalOpportunity)
+        .WithMany(o => o.AllowedGrades)
+        .HasForeignKey(x => x.InternalOpportunityId)
+        .OnDelete(DeleteBehavior.Cascade);
 
-            b.HasOne(x => x.Reviewer)
-             .WithMany()
-             .HasForeignKey(x => x.ReviewerId)
-             .OnDelete(DeleteBehavior.Restrict);
-        });
+    b.HasOne(x => x.Grade)
+        .WithMany()
+        .HasForeignKey(x => x.GradeId)
+        .OnDelete(DeleteBehavior.Restrict);
+});
+
+modelBuilder.Entity<VacancyApplication>(b =>
+{
+    b.HasKey(x => x.Id);
+
+    // One application per employee per opportunity
+    b.HasIndex(x => new { x.InternalOpportunityId, x.ApplicantEmployeeId })
+        .IsUnique();
+
+    b.Property(x => x.CoverLetterOrPitch)
+        .IsRequired()
+        .HasMaxLength(2000);
+
+    b.Property(x => x.Status)
+        .IsRequired()
+        .HasMaxLength(50);
+
+    b.Property(x => x.ResumeFilePath)
+        .HasMaxLength(500);
+
+    b.Property(x => x.ReviewerFeedback)
+        .HasMaxLength(1000);
+
+    b.HasOne(x => x.InternalOpportunity)
+        .WithMany(o => o.Applications)
+        .HasForeignKey(x => x.InternalOpportunityId)
+        .OnDelete(DeleteBehavior.Restrict);
+
+    b.HasOne(x => x.Applicant)
+        .WithMany(e => e.VacancyApplications)
+        .HasForeignKey(x => x.ApplicantEmployeeId)
+        .OnDelete(DeleteBehavior.Restrict);
+
+    b.HasOne(x => x.ReviewedBy)
+        .WithMany()
+        .HasForeignKey(x => x.ReviewedById)
+        .IsRequired(false)
+        .OnDelete(DeleteBehavior.Restrict);
+});
+      
 
         // ==========================================
         // 7. Notifications & Queue Workers (NOT-01, NOT-02)
         // ==========================================
         modelBuilder.Entity<Notification>(b =>
         {
-            b.HasKey(x => x.Id);
-            b.Property(x => x.Title).HasMaxLength(200).IsRequired();
-            b.Property(x => x.Message).IsRequired();
+         b.HasKey(x => x.Id);
 
-            b.HasOne(x => x.Employee)
-             .WithMany(e => e.Notifications)
-             .HasForeignKey(x => x.EmployeeId)
-             .OnDelete(DeleteBehavior.Restrict);
+         b.Property(x => x.Title)
+          .IsRequired()
+          .HasMaxLength(150);
+
+         b.Property(x => x.Message)
+          .IsRequired()
+          .HasMaxLength(1000);
+
+         b.Property(x => x.DeduplicationKey)
+          .HasMaxLength(200);
+
+         // Filter out NULLs so multiple notifications can have no key
+         b.HasIndex(x => x.DeduplicationKey)
+          .IsUnique();
+
+         b.HasOne(x => x.Employee)
+          .WithMany(e => e.Notifications)
+          .HasForeignKey(x => x.EmployeeId)
+          .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<EmailQueue>(b =>

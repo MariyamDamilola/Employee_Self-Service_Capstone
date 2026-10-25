@@ -8,13 +8,13 @@ public interface ILmsRepository
 
     Task<Course?> GetCourseWithModulesAndQuizAsync(int courseId);
 
-    Task<IReadOnlyList<Course>> GetAllActiveCoursesAsync();
+    Task<IEnumerable<Course>> GetAllActiveCoursesAsync();
 
     Task<CourseAssignment?> GetEnrollmentAsync(int courseId, int employeeId);
 
-    Task<IReadOnlyList<CourseAssignment>> GetEmployeeEnrollmentsAsync(int employeeId);
+    Task<IEnumerable<CourseAssignment>> GetEmployeeEnrollmentsAsync(int employeeId);
 
-    Task<IReadOnlyList<CourseAssignment>> GetOverdueEnrollmentsAsync(DateTime thresholdUtc);
+    Task<IEnumerable<CourseAssignment>> GetOverdueEnrollmentsAsync(DateTime thresholdUtc);
 
     Task AddCourseAsync(Course course);
 

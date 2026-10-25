@@ -1,4 +1,5 @@
 using Employee_Self_Service_Capstone.Domain.Entities;
+using Employee_Self_Service_Capstone.Domain.Enum;
 
 namespace Employee_Self_Service_Capstone.Repository.Interfaces;
 
@@ -10,13 +11,11 @@ public interface IEmployeeRepository
 
     Task<Employee?> GetByResetTokenAsync(string token);
 
-    Task<Employee?> GetBySetupTokenAsync(string token);
-
+    Task<Employee?> GetBySecurityTokenAsync(string token, AccountSecurityTokenPurpose purpose);
     Task<bool> EmailExistsAsync(string email);
 
     Task<bool> EmployeeNumberExistsAsync(string employeeNumber);
 
-    // Profile & Management Lookups
     Task<Employee?> GetProfileWithDetailsAsync(int employeeId);
 
     Task<IReadOnlyList<Employee>> GetDirectReportsAsync(int managerId);

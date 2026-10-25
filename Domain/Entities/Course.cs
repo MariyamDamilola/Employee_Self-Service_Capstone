@@ -13,8 +13,8 @@ public class Course
     public int CreatedById { get; set; }
     public Employee CreatedBy { get; set; } = null!;
 
-    public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
-    public DateTime? PublishedAtUtc { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime? PublishedAt { get; set; }
     
     public CourseAssessment? Assessment { get; set; }
     public ICollection<CourseLesson> Lessons { get; set; } = new List<CourseLesson>();

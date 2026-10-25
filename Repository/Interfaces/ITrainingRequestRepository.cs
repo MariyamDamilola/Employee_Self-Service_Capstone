@@ -8,9 +8,9 @@ public interface ITrainingRequestRepository
 
     Task<TrainingRequest?> GetWithDetailsAsync(int id);
 
-    Task<IReadOnlyList<TrainingRequest>> GetByEmployeeIdAsync(int employeeId);
+    Task<IEnumerable<TrainingRequest>> GetByEmployeeIdAsync(int employeeId);
 
-    Task<IReadOnlyList<TrainingRequest>> GetPendingApprovalsByReviewerAsync(int reviewerId);
+    Task<IEnumerable<TrainingRequest>> GetPendingApprovalsByReviewerAsync(int reviewerId);
 
     Task<bool> HasOverlappingApprovedTrainingAsync(int employeeId, DateTime startDate, DateTime endDate, int? excludeRequestId = null);
 

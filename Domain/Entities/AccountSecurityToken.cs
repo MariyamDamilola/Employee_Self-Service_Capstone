@@ -8,7 +8,7 @@ public class AccountSecurityToken
     public int EmployeeId { get; set; }
     public Employee Employee { get; set; }
     public string TokenHash { get; set; }
-    public AccountSecurityOtpPurpose Purpose { get; set; }
+    public AccountSecurityTokenPurpose Purpose { get; set; }
     public bool IsUsed { get; set; } = false;
     public DateTime ExpiresAt { get; set; }
     public DateTime? UsedAt { get; set; }

@@ -8,12 +8,16 @@ public class Employee
     public string FullName { get; set; }
     public string Email { get; set; }
     public string? PhoneNumber { get; set; }
+    public string? AccountSetupToken { get; set; }
+    public DateTime? AccountSetupTokenExpiresAt { get; set; }
+    public string? PasswordResetToken { get; set; }
+    public DateTime? PasswordResetTokenExpiry { get; set; }
     public int DepartmentId { get; set; }
     public int GradeId { get; set; }
     public int? ReportingManagerId { get; set; }
     public bool IsActive { get; set; } = true;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime? UpdatedAtUtc { get; set; }
+    public DateTime? UpdatedAt { get; set; }
     public Department? Department { get; set; } 
     public Grade? Grade { get; set; } 
     public Employee? ReportingManager { get; set; }
